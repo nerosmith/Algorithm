@@ -1,0 +1,36 @@
+package com.nero.main.java.algorithm.Graph_Basics;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // 使用兩種圖的存儲方式讀取testG1.txt文件
+        String filename = "C:/testG1.txt";
+        SparseGraph g1 = new SparseGraph(13, false);
+        ReadGraph readGraph1 = new ReadGraph(g1,filename);
+        System.out.println("test G1 in Sparse Graph:");
+        g1.show();
+
+        System.out.println();
+
+        DenseGraph g2 = new DenseGraph(13, false);
+        ReadGraph readGraph2 = new ReadGraph(g2,filename );
+        System.out.println("test G1 in Dense Graph:");
+        g2.show();
+
+        System.out.println();
+
+        // 使用兩種圖的存儲方式讀取testG2.txt文件
+        filename = "C:/testG2.txt";
+        SparseGraph g3 = new SparseGraph(6, false);
+        ReadGraph readGraph3 = new ReadGraph(g3, filename);
+        System.out.println("test G2 in Sparse Graph:");
+        g3.show();
+
+        System.out.println();
+
+        DenseGraph g4 = new DenseGraph(6, false);
+        ReadGraph readGraph4 = new ReadGraph(g4, filename);
+        System.out.println("test G2 in Dense Graph:");
+        g4.show();
+    }
+}
